@@ -1,0 +1,90 @@
+* {
+  margin: ;
+}
+
+body {
+  background: url(img/home.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "Times New Roman", Times, serif;
+  display: flex;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 15px 16px;
+  text-decoration: none;
+  position: relative;
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transition: width 0.3s; 
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+.navbar a:hover {
+}
+
+.formulario {
+  height: 200px; 
+  max-width: 200px;
+  margin-top: 100px;
+  margin-right: 300px;
+
+  padding: 100px;
+  background-color: rgba(23, 23, 23, 0.3);
+  border-radius: 10px;
+}
+
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  color: white;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Estilize o botão de envio */
+input[type="submit"] {
+  background-color: #d9653b; /* Cor de fundo do botão */
+  color: #fff; /* Cor do texto do botão */
+  padding: 10px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3; /* Cor de fundo do botão ao passar o mouse */
+}
+h2 {
+  color: white;
+}
+@media screen and (max-width: 568px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }

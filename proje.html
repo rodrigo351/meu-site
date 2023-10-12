@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora Simples</title>
+    <link rel="stylesheet" href="proje.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="proje.html">PROJETOS</a>
+      <a href="sobre.html">SOBRE MIM</a>
+      <a href="contato.html">CONTATO</a>
+      <a href="formacao.html">FORMAÇÃO</a>
+    </div>
+
+    <div class="calculator">
+      <h1>Calculadora</h1>
+      <input type="text" id="screen" value="0" readonly />
+      <br />
+      <button onclick="appendToScreen('7')">7</button>
+      <button onclick="appendToScreen('8')">8</button>
+      <button onclick="appendToScreen('9')">9</button>
+      <button onclick="appendToScreen('+')">+</button>
+      <br />
+      <button onclick="appendToScreen('4')">4</button>
+      <button onclick="appendToScreen('5')">5</button>
+      <button onclick="appendToScreen('6')">6</button>
+      <button onclick="appendToScreen('-')">-</button>
+      <br />
+      <button onclick="appendToScreen('1')">1</button>
+      <button onclick="appendToScreen('2')">2</button>
+      <button onclick="appendToScreen('3')">3</button>
+      <button onclick="appendToScreen('*')">*</button>
+      <br />
+      <button onclick="appendToScreen('0')">0</button>
+      <button onclick="appendToScreen('.')">.</button>
+      <button onclick="calculate()">=</button>
+      <button onclick="appendToScreen('/')">/</button>
+      <br />
+      <button onclick="clearScreen()">C</button>
+    </div>
+
+    <script>
+      let currentInput = "";
+      let screen = document.getElementById("screen");
+
+      function appendToScreen(value) {
+        currentInput += value;
+        screen.value = currentInput;
+      }
+
+      function clearScreen() {
+        currentInput = "";
+        screen.value = "0";
+      }
+
+      function calculate() {
+        try {
+          currentInput = eval(currentInput).toString();
+          screen.value = currentInput;
+        } catch (error) {
+          currentInput = "";
+          screen.value = "Error";
+        }
+      }
+    </script>
+  </body>
+</html>
