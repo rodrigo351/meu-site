@@ -3,6 +3,9 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   color: white;
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
 
 .caixa-texto {
